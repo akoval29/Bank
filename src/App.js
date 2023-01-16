@@ -9,13 +9,12 @@ import Payment from "./component/Payment";
 const START_BALANCE = 10000;
 const LIMIT_BALANCE = 100000;
 const GET_MONEY = 100;
-
 const SALARY_AMOUNT = 1000;
 const BOOK_PRICE = 550;
 const FOOD_PRICE = 50;
 
 export default function App() {
-  const [balance, setBalance] = React.useState(START_BALANCE);
+  const [balance, setBalance] = useState(START_BALANCE);
   const getMoney = () => setBalance(balance + GET_MONEY);
 
   useEffect(() => {
@@ -30,7 +29,7 @@ export default function App() {
     }
   }, [balance]);
 
-  const [payment, setPayment] = React.useState([]);
+  const [payment, setPayment] = useState([]);
 
   const getSalary = () => {
     setBalance(balance + SALARY_AMOUNT);
